@@ -16,6 +16,18 @@
         }
         .background-gif {
             position: relative;
+            flex-direction: column;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .background-gif2 {
+            position: relative;
             top: 0;
             left: 0;
             width: 100%;
@@ -34,6 +46,7 @@
         .construction-text {
             font-size: 36px;
             font-weight: bold;
+            flex-direction: column;
             top: 0;
             left: 80;
             position: relative;
@@ -55,10 +68,16 @@
 
     <div class="content">
         <div class="construction-text">Entangling some code particles, this website is momentarily in a superposition of maintenance and creativity!</div>
+        <div class="background-gif2">
+            <img src="construction.gif" alt="Your Second GIF" style="width: 200px; height: auto;" >
+        </div>
         <div class="equations">
             <!-- Add any relevant quantum equations or symbols here -->
         </div>
     </div>
+
+    <!-- Add one more GIF here -->
+
 
 </body>
 </html>
