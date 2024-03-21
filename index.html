@@ -1,58 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Under Construction</title>
     <link rel="icon" href="Images/example2.png" type="image/png">
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+            align-items: start;
+            justify-items: center;
+            padding: 20px;
             background-color: black;
         }
-        .background-gif {
-            position: relative;
-            flex-direction: column;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .background-gif2 {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+        .background-gif, .background-gif2 {
+            grid-column: span 2;
         }
         .content {
+            grid-column: span 2;
             text-align: center;
-            position: relative;
             color: rgb(255, 255, 255);
             font-family: Arial, sans-serif;
         }
         .construction-text {
             font-size: 36px;
             font-weight: bold;
-            flex-direction: column;
-            top: 0;
-            left: 80;
-            position: relative;
-            margin-bottom: 20px;
         }
         .equations {
             font-size: 18px;
@@ -61,26 +35,31 @@
             margin-top: 30px;
         }
         footer {
-        text-align: center;
-        margin-top: 50px;
-        width: 100%;
-    }
+            text-align: center;
+            margin-top: 50px;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .construction-text {
+                font-size: 24px;
+            }
+            .equations {
+                font-size: 16px;
+            }
+        }
     </style>
-    
 </head>
 <body>
-    <!-- Replace 'path/to/your/observer.gif' with the actual path to your GIF -->
     <div class="background-gif">
         <img src="observer.gif" alt="Quantum Brain GIF">
     </div>
-
     <div class="content">
         <div class="construction-text">Entangling some code particles, this website is momentarily in a superposition of maintenance and creativity!</div>
         <div class="background-gif2">
             <img src="construction.gif" alt="Your First GIF" style="width: 200px;" >
         </div>
         <div>
-            <img src="image.png" alt="Your Second Image" style="width: 300px"; margin-top: 50px;>
+            <img src="image.png" alt="Your Second Image" style="width: 300px; margin-top: 50px;">
             <footer style="text-align: center; margin-top: 50px; color: white; font-family: Arial, sans-serif;">    
                 &copy; <script>document.write(new Date().getFullYear())</script> Rohit Asegaonkar. All rights reserved.
             </footer>
@@ -88,8 +67,6 @@
         <div class="equations">
             <!-- Add any relevant quantum equations or symbols here -->
         </div>
-    <!-- Add one more GIF here -->
-
-
+    </div>
 </body>
 </html>
